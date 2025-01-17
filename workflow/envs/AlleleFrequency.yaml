@@ -1,0 +1,44 @@
+name: AlleleFrequency
+channels:
+  - bioconda
+  - r
+  - conda-forge
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=conda_forge
+  - _openmp_mutex=4.5=2_gnu
+  - bzip2=1.0.8=h4bc722e_7
+  - c-ares=1.32.3=h4bc722e_0
+  - ca-certificates=2024.9.24=h06a4308_0
+  - certifi=2020.6.20=pyhd3eb1b0_3
+  - htslib=1.21=h5efdd21_0
+  - keyutils=1.6.1=h166bdaf_0
+  - krb5=1.20.1=h81ceb04_0
+  - libcurl=8.9.1=h251f7ec_0
+  - libdeflate=1.21=h4bc722e_0
+  - libedit=3.1.20230828=h5eee18b_0
+  - libev=4.33=hd590300_2
+  - libffi=3.4.4=h6a678d5_1
+  - libgcc=14.1.0=h77fa898_1
+  - libgcc-ng=14.1.0=h69a702a_1
+  - libgomp=14.1.0=h77fa898_1
+  - libnghttp2=1.58.0=h47da74e_1
+  - libsqlite=3.46.0=hde9e2c9_0
+  - libssh2=1.11.0=h0841786_0
+  - libstdcxx=14.1.0=hc0a3c3a_1
+  - libstdcxx-ng=14.1.0=h4852527_1
+  - libzlib=1.2.13=h4ab18f5_6
+  - lofreq=2.1.3.1=py27_0
+  - ncurses=6.5=he02047a_1
+  - openssl=3.3.2=hb9d3cd8_0
+  - pip=20.1.1=pyh9f0ad1d_0
+  - python=2.7.18=h42bf7aa_3
+  - readline=8.2=h8228510_1
+  - samtools=1.21=h50ea8bc_0
+  - setuptools=44.0.0=py27_0
+  - sqlite=3.46.0=h6d4b2fc_0
+  - tk=8.6.14=h39e8969_0
+  - wheel=0.37.1=pyhd8ed1ab_0
+  - xz=5.4.6=h5eee18b_1
+  - zlib=1.2.13=h4ab18f5_6
+prefix: /gpfs/commons/home/alcheng/miniconda3/envs/AlleleFrequency

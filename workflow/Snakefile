@@ -1,0 +1,37 @@
+"""
+
+The follow snakemake pipeline will product trinucleotide frequency counts for:
+1) Duplex denoised data
+2) Single Strand denoised data
+3) UMI-agnostic denoised data
+
+To estimate the contribution of certain signatures to the trinucleotide profiles,
+you will need to run the notebooks in the ./analysis/notebooks folder
+
+contact alcheng@nygenome.org for assistance!
+
+"""
+
+import os
+from snakemake.utils import min_version
+import glob
+min_version("6.0")
+
+#------------------------------ Config ----------------------------------#
+#chromosomes = [f'chr{str(i)}' for i in range(1,23)] + ['chrX', 'chrY']
+chromosomes = ['chr21', 'chr22']
+sample_ids = ['329-botseq']
+
+include: 'rules/RawData.smk'
+include: 'rules/IndexHg38.smk'
+include: 'rules/Duplex.smk'
+include: 'rules/SingleStrand.smk'
+include: 'rules/UmiAgnostic.smk'
+
+#----------------------------- ALL --------------------------------------#
+rule all:
+    input:
+    	expand('results/WgsDuplex/RawData/Flagstats/{sample_id}/{chrom}/{sample_id}.{chrom}.flagstat', sample_id = sample_ids, chrom = chromosomes),
+        expand('results/WgsDuplex/Duplex/{sample_id}/{sample_id}.duplex_denoised.trinucleotides.txt', sample_id = sample_ids),
+        expand('results/WgsDuplex/SingleStrand/{sample_id}/{sample_id}.singlestrand_denoised.trinucleotides.txt', sample_id = sample_ids),
+        expand('results/WgsDuplex/UmiAgnostic/{sample_id}/{sample_id}.umiagno_denoised.trinucleotides.txt', sample_id = sample_ids)
