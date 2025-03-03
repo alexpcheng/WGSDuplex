@@ -55,6 +55,6 @@ Software has been test on the following OS:
     Kernel: Linux 3.10.0-1160.118.1.el7.x86_64
     Architecture: x86-64
 
-Using a 64GB, 16 core machine, the pipeline took approximately X hours to complete on the provided dataset
+Using a 64GB, 16 core machine, the pipeline took approximately 2 hours to complete on the provided dataset
 
 
